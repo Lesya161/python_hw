@@ -15,3 +15,20 @@
 # Рентабельность выручки = 0.5
 # Введите численность сотрудников фирмы: 10
 # Прибыль фирмы в расчете на одного сотрудника = 50.0
+
+
+revenue = float(input('Введите значение выручки фирмы: '))
+costs = float(input('Введите значение издержек фирмы: '))
+if revenue > costs:
+    profit = float(round(revenue - costs, 2))
+    print(f'Финансовый результат - прибыль, ее величина: {profit}')
+    print('Вычисляем рентабельность выручки.')
+    rent = float(round(profit/revenue, 2))
+    print(f'Рентабельность выручки: {rent}')
+    staff = int(input('Введите численность сотрудников: '))
+    profit_per_employee = float(round(profit/staff, 2))
+    print(f'Прибыль фирмы в расчете на одного сотрудника: {profit_per_employee}')
+elif revenue == costs:
+    print('Прибыль равна 0, точка безубыточности')
+else:
+    print('Компания работает в убыток, прибыли нет')
