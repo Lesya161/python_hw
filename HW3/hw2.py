@@ -13,3 +13,13 @@
 например, my_list = [7, 5, 3, 3, 2].
 """
 
+my_rating = [7, 5, 4, 3, 2]
+new_rating = int(input("Введите новое значение рейтинга: "))
+
+for i in range(len(my_rating)):
+    if  new_rating >= my_rating[i]:
+        my_rating.insert(i, new_rating)
+        break
+else:
+    my_rating.append(new_rating)
+print(my_rating)
