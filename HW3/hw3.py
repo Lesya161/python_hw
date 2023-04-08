@@ -19,4 +19,35 @@
 # “количества”: [5, 2, 7],
 # “ед”: [“шт.”]
 # }
+# print("Заполните данные")
+# product_values = ['название', 'цена', 'количество', 'eд']
+# final_values  = [(i, {k:input(f'{k}: ') for k in product_values})for i in range(1, 4)]
+# for i in final_values:
+#     print(i)
+
+product_values = []
+for i in range(1, 4):
+    print(f"Заполните данные по {i} товару")
+    name_value = input("Введите название: ")
+    price_value = int(input("Введите цену: "))
+    count_value = int(input("Введите количество: "))
+    ed_value = input("Введите единицу измерения: ")
+    product_values.append((i, {'название': name_value, 'цена': price_value, 'количество': count_value, 'eд': ed_value}))
+
+print(f"Список товаров: {product_values}")
+
+name_value = []
+price_value = []
+count_value = []
+ed_value = []
+for i in product_values:
+    name_value.append(i[1].get('название'))
+    price_value.append(i[1].get('цена'))
+    count_value.append(i[1].get('количество'))
+    ed_value.append(i[1].get('eд'))
+final_values = {'название': list(set(name_value)), 'цена': list(set(price_value)), 'количество': list(set(count_value)), 'eд': list(set(ed_value))}
+
+print(final_values)
+
+
 

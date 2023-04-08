@@ -8,3 +8,19 @@
 # Результат через словарь: Осень
 # """
 
+season_year_list = ["Зима", "Зима", "Весна", "Весна", "Весна", "Лето", "Лето", "Лето", "Осень", "Осень", "Осень", "Зима"]
+season_year_dict = {1: 'Зима', 2: 'Зима', 3: 'Весна', 4: 'Весна', 5: 'Весна', 6: 'Лето', 7: 'Лето', 8: 'Лето', 9: 'Осень', 10: 'Осень', 11: 'Осень', 12: 'Зима'}
+
+season_month = int(input("Введите месяц в виде целого числа: "))
+if season_month > 12 or season_month < 1:
+    print('Вы ввели неверное число, попробуйте еще раз.')
+else:
+    season_month = season_month - 1
+    print(f'Это месяц в списке: {season_year_list[season_month]}')
+
+season_month = int(input("Введите месяц в виде целого числа: "))
+if season_month > 12 or season_month < 1:
+    print('Вы ввели неверное число, попробуйте еще раз.')
+else:
+    print(f'Это месяц в словаре: {season_year_dict[season_month]}')
+
