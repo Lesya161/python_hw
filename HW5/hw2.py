@@ -13,3 +13,13 @@
 # Введите число: 123
 # Количество четных и нечетных цифр в числе равно: (1, 2)
 
+def even_odd(n, even = 0, odd = 0):
+    if not n:
+        return even, odd
+    elif n % 2 == 1:
+        odd += 1
+    else:
+        even += 1
+    return even_odd(n // 10, even, odd)
+n = int (input("Введите число: "))
+print(f'Количество четных и нечетных чисел равно {even_odd(n)}')
