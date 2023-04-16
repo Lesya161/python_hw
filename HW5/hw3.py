@@ -16,3 +16,9 @@
 1230 -> 0321
 """
 
+def number_reverse(n):
+    if n == 0:
+        return ''
+    return str(n % 10) + number_reverse(n // 10)
+n= int(input("Введите число: "))
+print(f"Перевернутое число: {number_reverse(n)}")
